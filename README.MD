@@ -1,0 +1,1 @@
+This is an application that was made as part of codeup-web-projects. This is a self-enclosed version of it.
