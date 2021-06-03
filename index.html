@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        :root {
+            --light-blue: #33ccff;
+            --dark-blue: #668cff;
+
+            --metric: #37718E;
+            --cadet: #3F7CAC;
+            --charcoal: #364156;
+
+            --fiveback: #595959;
+        }
+
+        .head {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            padding: 20px 40px;
+            background: var(--cadet);
+            margin: 0px 0px 40px;
+        }
+
+        #currHead {
+            background: var(--charcoal);
+            text-align: center;
+        }
+
+        .curr-disp {
+            width: 100%;
+        }
+
+        .leftCurr {
+            text-align: center;
+            background: var(--dark-blue);
+            color: white;
+            padding-top: 20px;
+        }
+
+        .rightCurr {
+            text-align: center;
+            background: var(--light-blue);
+        }
+
+        #metrics {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            margin: 40px auto 80px;
+            background: var(--metric);
+        }
+
+        section {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 400px;
+            margin-bottom: 80px;
+        }
+
+        /*.card {*/
+        /*    width: 19%;*/
+        /*}*/
+
+
+        .back {
+            background: var(--fiveback);
+            color: white;
+        }
+
+        .five-unit {
+            width: 250px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        footer {
+            background: var(--metric);
+            height: 150px;
+            text-align: center;
+            color: white;
+        }
+
+        .form-group {
+            display: flex;
+        }
+
+        /*@media screen and (min-width: 872px){*/
+        /*    #metrics {*/
+
+        /*    }*/
+
+        /*    !*.five-unit {*!*/
+        /*    !*    width: 150px;*!*/
+        /*    !*}*!*/
+        /*}*/
+
+        @media screen and (min-width: 937px){
+            .five-unit {
+                width: 150px;
+                /*max-width: 250px;*/
+            }
+        }
+
+        @media screen and (min-width: 1135px){
+            .five-unit {
+                width: 200px;
+            }
+        }
+
+        /*@media screen and(min-width: 476px){*/
+        /*    .innerCon {*/
+        /*        flex-direction: row;*/
+        /*    }*/
+
+        /*    .leftCurr {*/
+        /*        width: 50%;*/
+        /*    }*/
+
+        /*    .rightCurr {*/
+        /*        width: 50%;*/
+        /*    }*/
+        /*}*/
+    </style>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+    <div class=" head">
+        <h3>Weather App</h3>
+        <div class="form-group">
+            <input type="text" id="userSearch" class="form-control">
+            <button class="btn btn-secondary">SEARCH</button>
+        </div>
+<!--        <span id="currentCity"></span>-->
+    </div>
+
+    <section>
+
+    </section>
+
+    <div id="metrics" class="row">
+
+    </div>
+
+    <div id="map" class="container"></div>
+
+    <footer>
+        <h1>This is a footer</h1>
+    </footer>
+
+
+<!--    <script src="https://code.jquery.com/jquery-2.2.4.min.zjs" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>-->
+
+    <script src="js/jquery.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
+    <script src="js/keys.js"></script>
+    <script src="js/mapbox-geocoder-utils.js"></script>
+
+    <script src="js/weather-functions.js"></script>
+<!--    <script src="js/weather.js"></script>-->
+
+<script src="https://kit.fontawesome.com/10517977d2.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
